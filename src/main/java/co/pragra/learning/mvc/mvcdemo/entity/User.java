@@ -9,7 +9,7 @@ import javax.persistence.*;
 
 @Entity(name = "user")
 @Data
-@NoArgsConstructor
+@NoArgsConstructorgit
 @AllArgsConstructor
 @Table(name = "TABLE_USER")
 //@JsonIgnoreProperties({ "createdBy", "lastModifiedBy" })
