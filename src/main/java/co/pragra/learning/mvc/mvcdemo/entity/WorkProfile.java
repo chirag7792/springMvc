@@ -10,7 +10,7 @@ import java.util.Date;
 public class WorkProfile {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  private long profileId;
+  private Long profileId;
   private String companyName;
   private String jobTitle;
   private Date startDate;

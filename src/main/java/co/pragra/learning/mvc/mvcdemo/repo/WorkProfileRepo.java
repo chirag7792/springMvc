@@ -8,5 +8,4 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface WorkProfileRepo extends JpaRepository<WorkProfile,Long> {
 
-    public WorkProfile createWorkProfile();
 }

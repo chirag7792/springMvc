@@ -1,26 +1,31 @@
 package co.pragra.learning.mvc.mvcdemo.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.AllArgsConstructor;
 import lombok.Data;
-import sun.plugin.util.UserProfile;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-@Entity
+@Entity(name = "user")
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "TABLE_USER")
+//@JsonIgnoreProperties({ "createdBy", "lastModifiedBy" })
 public class User {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long userId;
+    private Long userId;
     private String firstName;
     private String lastName;
-    @Column(unique = true, nullable = false)
+//    @Column(unique = true, nullable = false)
     private String phoneNumber;
-    @Column(unique = true, nullable = false)
+//    @Column(unique = true, nullable = false)
     private String email;
 
-    @OneToOne
-    @JoinColumn(name = "profile_id")
-    private WorkProfile profile;
+//    @OneToOne
+//    @JoinColumn(name = "profile_id")
+//    private WorkProfile profile;
 
 }
