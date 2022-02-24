@@ -12,7 +12,7 @@ import java.util.List;
 @Service
 public class WorkProfileService {
 
-    public WorkProfileRepo repo;
+    private WorkProfileRepo repo;
 
     public WorkProfileService(WorkProfileRepo repo) {
         this.repo = repo;
@@ -20,9 +20,13 @@ public class WorkProfileService {
 
 
     public WorkProfile createWorkProfile(WorkProfile profile){
-
         return repo.save(profile);
-
+    }
+        public List<WorkProfile> createWorkProfiles(List<WorkProfile> pro){
+            return repo.saveAll(pro);
+        }
+        public List<WorkProfile> getAll(){
+            return repo.findAll();
+        }
     }
 
-}
